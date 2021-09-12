@@ -1,8 +1,8 @@
-import type { NextPage } from 'next'
-import styles from '../styles/Home.module.scss'
-import { Button, InputGroup  } from "@blueprintjs/core";
+import { Button, InputGroup } from '@blueprintjs/core';
+import React from 'react'
 import { Col, Container, Row, Card } from 'react-bootstrap';
 import { useForm, Controller, SubmitHandler } from 'react-hook-form';
+import styles from "../styles/register.module.scss";
 
 interface RegisterProps {
   firstName: string;
@@ -11,8 +11,7 @@ interface RegisterProps {
   password: string;
   confirmPassword: string;
 }
-
-const Home: NextPage = () => {
+const Register: React.FC<RegisterProps> = ({ }) => {
   const { control, handleSubmit } = useForm<RegisterProps>();
   const onSubmit: SubmitHandler<RegisterProps> = (data: any) => {
     console.log(data);
@@ -78,6 +77,6 @@ const Home: NextPage = () => {
       </Card>
     </Container>
   );
-}
+};
 
-export default Home
+export default Register;

@@ -1,0 +1,12 @@
+.registerFormContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.card>.card-body>form {
+    .row {
+        margin-bottom: 3rem;
+    }
+}
